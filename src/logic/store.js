@@ -16,7 +16,7 @@ export const playTrigger = writable(1);
 export const playAudio = writable(false);
 
 export const youtubeStore = writable({
-  title: undefined,
+  title: 'AUDIOSCAPE',
   url: undefined,
   playable: false
 });
