@@ -20,6 +20,13 @@
     }
   }
 
+  // MP4 because Apple still doesn't support all the good stuff
+  const getHighestAudioMP4URL = formats => {
+    return formats
+           .filter(format => format.mimeType.includes('audio/mp4'))
+           .sort((a, b) => a.audioBitrate - b.audioBitrate)[0].url;
+  }
+
   const changeURL = async event => {
     const inputString = event.target.value;
 
@@ -27,15 +34,15 @@
       searching = true;
       const meta = await fetchYoutubeMeta(inputString);
 
-      // if (meta.status === 'OK') {
-      //   $youtubeStore.playable = true;
-      //   $youtubeStore.title = meta.title;
-      // }
+      if (meta.status === 'OK') {
+        // $audioStore.url = inputString;
+        $youtubeStore.url = 'https://cors-anywhere.herokuapp.com/' + getHighestAudioMP4URL(meta.formats);
+        $youtubeStore.playable = true;
+        $youtubeStore.title = meta.channelName;
+      }
 
-      $youtubeStore.playable = true; // TEMPORARY PLACEHOLDER
-      $audioStore.url = 'jazz.mp3'; // TEMPORARY PLACEHOLDER
       searching = false;
-    } else if ($audioStore.status !== 'playing'){
+    } else if ($audioStore.status !== 'playing') {
       $youtubeStore.playable = false;
     }
   };
@@ -54,7 +61,7 @@
     on:input={changeURL}
     on:keydown|stopPropagation={enterSubmit}
     type="text"
-    placeholder="YouTube video URL or ID"
+    placeholder="YouTube URL or ID"
     value={url}
     transition:fade
   >
