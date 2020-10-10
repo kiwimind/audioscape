@@ -13,5 +13,5 @@
   </mask>
 </defs>
 
-<circle id="sun" cx="50" cy="40" r="31" fill="pink"/>
+<circle id="sun" cx="50" cy="40" r="32" fill="pink"/>
 <circle id="sun" cx="50" cy="40" r="31" mask="url(#sun-bands)" fill="url('#sunGradient')"/>
