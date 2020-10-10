@@ -13,5 +13,6 @@
 <style>
   text {
     font-size: 10px;
+    opacity: 0.5;
   }
 </style>
