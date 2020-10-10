@@ -27,10 +27,11 @@
       searching = true;
       const meta = await fetchYoutubeMeta(inputString);
 
-      // if (meta.status === 'OK') {
-      //   $youtubeStore.playable = true;
-      //   $youtubeStore.title = meta.title;
-      // }
+      if (meta.status === 'OK') {
+        console.log(meta);
+        // $youtubeStore.playable = true;
+        // $youtubeStore.title = meta.title;
+      }
 
       $youtubeStore.playable = true; // TEMPORARY PLACEHOLDER
       $audioStore.url = 'jazz.mp3'; // TEMPORARY PLACEHOLDER
