@@ -12,7 +12,10 @@
 </script>
 
 <text class:fadeout class:fadein
-  x="50" y="47" text-anchor="middle" alignment-baseline="central"
+  x="50" y="47"
+  alignment-baseline="central"
+  text-anchor="middle"
+  textLength="95%"
 >{title}</text>
 
 <style>
