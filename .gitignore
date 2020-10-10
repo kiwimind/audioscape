@@ -1,0 +1,15 @@
+*
+
+!.gitignore
+!package.json
+!package-lock.json
+!rollup.config.js
+!README.md
+
+!src
+!src/**
+!public
+!public/index.html
+!public/global.css
+!public/favicon.ico
+!public/jazz.mp3
