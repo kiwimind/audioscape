@@ -17,5 +17,6 @@ export const playAudio = writable(false);
 
 export const youtubeStore = writable({
   title: undefined,
+  url: undefined,
   playable: false
 });

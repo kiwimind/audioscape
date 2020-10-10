@@ -10,17 +10,17 @@ const analyser = context.createAnalyser();
 const sourceElement = context.createMediaElementSource(audio);
 let sourceFetch;
 
-const getAudio = function(url) {
-  fetch(url)
-  .then(res => res.arrayBuffer())
-  .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
+// const getAudio = function(url) {
+//   fetch(url)
+//   .then(res => res.arrayBuffer())
+//   .then(arrayBuffer => context.decodeAudioData(arrayBuffer))
 
-  .then(audioBuffer => {
-    sourceFetch = context.createBufferSource();
-    sourceFetch.buffer = audioBuffer;
-  })
-  .catch(err => console.error(err))
-}
+//   .then(audioBuffer => {
+//     sourceFetch = context.createBufferSource();
+//     sourceFetch.buffer = audioBuffer;
+//   })
+//   .catch(err => console.error(err))
+// }
 
 sourceElement.connect(analyser);
 analyser.connect(context.destination);
@@ -58,8 +58,8 @@ audio.addEventListener('pause', e => $audioStore.status = 'not playing');
 
 const startAudio = ()=> {
   if ($audioStore.currentTime <= 0) {
-    audio.src = $audioStore.url;
-    getAudio($audioStore.url);
+    audio.src = $youtubeStore.url;
+    // getAudio($audioStore.url);
   }
 
   audio.play();
