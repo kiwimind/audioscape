@@ -37,7 +37,7 @@
 
       if (meta.status === 'OK') {
         // $audioStore.url = inputString;
-        $youtubeStore.url = 'https://corsno.herokuapp.com/' + getHighestAudioMP4URL(meta.formats);
+        $youtubeStore.url = 'https://cors-anywhere.herokuapp.com/' + getHighestAudioMP4URL(meta.formats);
         $youtubeStore.playable = true;
         $youtubeStore.title = meta.channelName;
       }
