@@ -24,9 +24,8 @@
   const getHighestAudioMP4URL = formats => {
     return formats
            .filter(format => format.mimeType.includes('audio/mp4'))
-           .sort((a, b) => a.audioBitrate - b.audioBitrate)[0];
+           .sort((a, b) => a.audioBitrate - b.audioBitrate)[0].url;
   }
-
 
   const changeURL = async event => {
     const inputString = event.target.value;
