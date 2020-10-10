@@ -36,7 +36,7 @@
       console.log(meta);
 
       if (meta.status === 'OK') {
-        $audioStore.url = getHighestAudioMP4URL(meta.formats);
+        $audioStore.url = 'https://cors-anywhere.herokuapp.com/' + getHighestAudioMP4URL(meta.formats);
         $youtubeStore.playable = true;
         $youtubeStore.title = meta.channelName;
       }
