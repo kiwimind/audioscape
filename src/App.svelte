@@ -10,6 +10,8 @@
 			$playTrigger *= -1;
 		}
 	}
+
+	console.log('🦆');
 </script>
 
 <svelte:window on:keydown={handleKeydown}/>
