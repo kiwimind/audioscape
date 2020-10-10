@@ -38,7 +38,7 @@
       if (meta.status === 'OK') {
         $audioStore.url = getHighestAudioMP4URL(meta.formats);
         $youtubeStore.playable = true;
-        $youtubeStore.title = meta.title;
+        $youtubeStore.title = meta.channelName;
       }
 
       searching = false;
