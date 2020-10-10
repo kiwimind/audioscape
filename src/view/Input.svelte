@@ -62,7 +62,7 @@
     on:input={changeURL}
     on:keydown|stopPropagation={enterSubmit}
     type="text"
-    placeholder="YouTube video URL or ID"
+    placeholder="YouTube URL or ID"
     value={url}
     transition:fade
   >
