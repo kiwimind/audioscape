@@ -20,6 +20,14 @@
     }
   }
 
+  // MP4 because Apple still doesn't support all the good stuff
+  const getHighestAudioMP4URL = formats => {
+    return formats
+           .filter(format => format.mimeType.includes('audio/mp4'))
+           .sort((a, b) => a.audioBitrate - b.audioBitrate)[0];
+  }
+
+
   const changeURL = async event => {
     const inputString = event.target.value;
 
@@ -29,12 +37,11 @@
       console.log(meta);
 
       if (meta.status === 'OK') {
+        $audioStore.url = getHighestAudioMP4URL(meta.formats);
         $youtubeStore.playable = true;
         $youtubeStore.title = meta.title;
       }
 
-      $youtubeStore.playable = true; // TEMPORARY PLACEHOLDER
-      $audioStore.url = 'jazz.mp3'; // TEMPORARY PLACEHOLDER
       searching = false;
     } else if ($audioStore.status !== 'playing'){
       $youtubeStore.playable = false;
