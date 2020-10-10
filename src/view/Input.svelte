@@ -33,7 +33,6 @@
     if (isValidYoutubeString(inputString)) {
       searching = true;
       const meta = await fetchYoutubeMeta(inputString);
-      console.log(meta);
 
       if (meta.status === 'OK') {
         // $audioStore.url = inputString;
