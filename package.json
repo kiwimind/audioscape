@@ -1,6 +1,11 @@
 {
   "name": "audioscape",
+  "author": "Ron Au",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/roncya/audioscape.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

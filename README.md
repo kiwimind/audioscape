@@ -6,7 +6,7 @@ Created for Svelte Summit 2020 baybee!
 
 ## Check it out
 
-https://audioscapes.vercel.app
+https://audioscape.vercel.app
 
 ## Run it yourself
 
