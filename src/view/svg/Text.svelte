@@ -11,7 +11,9 @@
      }
 </script>
 
-<text x="50" y="47" text-anchor="middle" alignment-baseline="central" class:fadeout|fadein>{title}</text>
+<text class:fadeout class:fadein
+  x="50" y="47" text-anchor="middle" alignment-baseline="central"
+>{title}</text>
 
 <style>
   text {

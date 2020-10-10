@@ -17,11 +17,11 @@
   </clipPath>
 </defs>
 
-<text x="50" y="47"
-  text-anchor="middle" alignment-baseline="central"
+<text class:fadeout class:fadein
+  x="50" y="47"
   style="clip-path: url(#invertedTextClip)"
+  text-anchor="middle" alignment-baseline="central"
   transform="scale(1,-1) translate(0, -100)"
-  class:fadeout|fadein
 >{title}</text>
 
 <style>
