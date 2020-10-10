@@ -73,7 +73,7 @@
     width: calc(95vmin * 0.7);
     height: 6%;
     top: calc(50% + 15vmin);
-    padding-bottom: 0.65em;
+    padding: 0.65em;
     z-index: 2;
     border: none;
     border-radius: 5px;
